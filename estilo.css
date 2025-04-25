@@ -1,0 +1,428 @@
+@font-face {
+    font-family: AsenPro;
+    src: url('fonts/AsenPro-Semibold.otf');
+}
+
+@font-face {
+    font-family: AsenPro-bold;
+    src: url('fonts/AsenPro-Bold.otf');
+}
+
+@font-face {
+    font-family: Popins;
+    src: url('fonts/Poppins-Italic.ttf');
+}
+
+@font-face {
+    font-family: Poppins-light;
+    src: url('fonts/Poppins-Light.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #3db8a6 #ffffff00;
+    scrollbar-base-color: #ffffff00;
+}
+
+body {
+    background-color: rgb(6, 16, 13);
+    font-family: open sans;
+    justify-content: center;
+}
+
+.fondo1 {
+    background: linear-gradient(transparent, rgba(6, 16, 13, 0.395)), url('fotos/rectangle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 120vh;
+    width: 100%;
+    position: relative;
+}
+
+.fondo2 {
+    background: linear-gradient(transparent, rgba(6, 16, 13, 0.849)), url('fotos/bg2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.fondo3 {
+    background-image: url('fotos/deco3.svg'), url('fotos/deco2.svg');
+    background-size: 30%, 40%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: left top, right bottom;
+    height: 100vh;
+    width: 100%;
+}
+
+.fondo4 {
+    background-image: url('fotos/deco1.svg'), url('fotos/deco2.svg');
+    background-size: 25%, 30%;
+    background-repeat: no-repeat, no-repeat;
+    background-position: right bottom, left top;
+    height: 100vh;
+    width: 100%;
+}
+
+#logo {
+    width: 180px;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+}
+
+#capa1 {
+    border: rgb(0, 0, 0, 0) 10px solid;
+}
+
+h1 {
+    font-family: AsenPro;
+    font-weight: 800;
+    font-size: 5vw;
+    color: white;
+    word-spacing: 0.1em;
+    letter-spacing: 2px;
+}
+
+.fondo1 h1 {
+    font-family: AsenPro-bold;
+    font-weight: 800;
+    text-align: center;
+    word-spacing: 1px;
+    font-size: 70px;
+}
+
+#nav1:hover,
+#nav1:active {
+    color: #3db8a6 !important;
+}
+
+#nav1::after,
+#nav1::before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0);
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: all 290ms ease-in-out;
+    transition: all 290ms ease-in-out;
+    width: 0;
+}
+
+#nav1:hover::after,
+#nav1:hover::before {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-color: #fff;
+    -webkit-transition: width 350ms ease-in-out;
+    transition: width 350ms ease-in-out;
+    width: 70%;
+}
+
+#nav1:hover::before {
+    bottom: auto;
+    top: 0;
+    width: 70%;
+}
+
+p {
+    font-family: Popins;
+    color: white;
+    word-spacing: 0.1em;
+    font-size: 1.6em;
+    margin-bottom: 0;
+    font-weight: 200;
+
+}
+
+.row {
+    flex-wrap: wrap;
+}
+
+.fondo2 h1 {
+    font-weight: 400;
+}
+
+.fondo2 p {
+    font-family: Poppins-light;
+    font-size: 1.3em;
+    font-weight: 200;
+}
+
+.form-control {
+    border: none;
+    background-color: #ffffff00;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-bottom: 2px solid #ffffff;
+    background-color: #ffffff00;
+    box-shadow: none;
+    outline: none;
+}
+
+.bg-success {
+    background-color: #3db8a629 !important;
+}
+
+
+input[type=radio] {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel-wrapper {
+    width: 90% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.carousel {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.carousel-i {
+    position: absolute !important;
+    width: 60% !important;
+    height: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto !important;
+    transition: transform .4s ease !important;
+    cursor: pointer !important;
+}
+
+.carousel-i img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 10px;
+}
+
+#item-1:checked~.carousel #slide-1,
+#item-2:checked~.carousel #slide-2,
+#item-3:checked~.carousel #slide-3 {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+}
+
+#item-1:checked~.carousel #slide-2,
+#item-2:checked~.carousel #slide-3,
+#item-3:checked~.carousel #slide-1 {
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+#item-1:checked~.carousel #slide-3,
+#item-2:checked~.carousel #slide-1,
+#item-3:checked~.carousel #slide-2 {
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.text-container {
+    min-height: 180px;
+    /* Ajusta según el texto más largo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#game-title {
+    min-height: 60px;
+    /* Espacio reservado para el título */
+}
+
+#game-description {
+    min-height: 40px;
+    /* Espacio reservado para el párrafo */
+}
+
+#game-text {
+    min-height: 80px;
+    /* Espacio reservado para la descripción */
+    word-spacing: 10px;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    /* Ajustar el navbar */
+    .navbar-nav {
+        text-align: center;
+    }
+
+    /* Asegurar que los contenedores sean responsivos */
+    .container-fluid {
+        padding: 10px;
+    }
+
+    /* Ajustar el tamaño del logo */
+    #logo img {
+        width: 120px;
+    }
+
+    /* Asegurar que los textos no sean muy grandes */
+    .fondo1,
+    .fondo2,
+    .fondo3,
+    .fondo4 {
+        height: auto;
+        padding: 50px 10px;
+    }
+
+    /* Asegurar que las columnas no sean demasiado anchas */
+    .col-5 {
+        width: 100%;
+    }
+
+    /* Ajustar imágenes */
+    .carousel img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Ajustar formulario de contacto */
+    .col-4 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.btn-subir {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(129, 172, 64, 0.381);
+    /* Fondo semi-transparente */
+    color: white;
+    border: none;
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    opacity: 0.7;
+    /* Transparencia inicial */
+    z-index: 1000;
+}
+
+.btn-subir:hover {
+    background-color: rgba(72, 146, 115, 0.732);
+    opacity: 1;
+}
+
+.popup-float {
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #6bd69f;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: width 0.3s, height 0.3s, border-radius 0.3s, background-color 0.3s;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Cuando el usuario pasa el cursor, el botón se expande */
+.popup-float:hover {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #28a745;
+    font-size: 13px;
+}
+
+/* Ocultar texto por defecto */
+.popup-text {
+    display: none;
+    margin-left: 10px;
+}
+
+/* Mostrar texto al pasar el cursor */
+.popup-float:hover .popup-text {
+    display: inline;
+}
+
+/* Mostrar texto al pasar el cursor */
+.popup-float:hover .popup-text {
+    display: inline;
+}
+
+.modal-content {
+    background-color: #18302cfd;
+    color: white;
+    background: url('fotos/deco1.svg') no-repeat #0f1f1cfd;
+    background-size: 25%;
+    background-position: right bottom;
+    border: 2px solid #3db8a6;
+
+}
+
+.modal-content h5 {
+    font-family: AsenPro;
+    font-weight: 800;
+    font-size: 1.5em;
+    color: white;
+    word-spacing: 0.1em;
+}
+
+.modal-content span {
+    font-family: Popins;
+    color: white;
+    word-spacing: 0.1em;
+    font-size: 1em;
+}

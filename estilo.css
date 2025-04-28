@@ -375,6 +375,14 @@ input[type=radio] {
     font-size: 1em;
 }
 
+#footer{
+    text-decoration: none;
+    justify-content: space-between;
+}
+#footer li{
+    list-style-type: none;
+    margin: 0 10px;
+}
 @media (max-width: 720px) {
     #footer{
         font-size: 0.9em;

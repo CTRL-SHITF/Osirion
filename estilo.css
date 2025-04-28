@@ -376,7 +376,20 @@ input[type=radio] {
 }
 
 @media (max-width: 720px) {
+    #footer{
+        font-size: 0.9em;
+        text-decoration: none;
+        justify-content: space-between;
 
+    }
+    #footer li{
+        list-style-type: none;
+        margin: 0 10px;
+    }
+    #herramientas{
+        font-size: 0.7em;
+        text-decoration: none;
+    }
     /* Ajustar el navbar */
     .navbar-nav {
         text-align: center;

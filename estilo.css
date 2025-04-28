@@ -255,7 +255,6 @@ input[type=radio] {
 
 .text-container {
     min-height: 180px;
-    /* Ajusta según el texto más largo */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -263,20 +262,18 @@ input[type=radio] {
 
 #game-title {
     min-height: 60px;
-    /* Espacio reservado para el título */
 }
 
 #game-description {
     min-height: 40px;
-    /* Espacio reservado para el párrafo */
 }
 
 #game-text {
-    min-height: 80px;
-    /* Espacio reservado para la descripción */
     word-spacing: 10px;
 }
-
+#linea {
+    margin-bottom: 10px;
+}
 .btn-subir {
     position: fixed;
     bottom: 20px;
@@ -374,7 +371,6 @@ input[type=radio] {
     word-spacing: 0.1em;
     font-size: 1em;
 }
-
 #footer{
     text-decoration: none;
     justify-content: space-between;
@@ -442,6 +438,10 @@ input[type=radio] {
 
     #game-text {
         font-size: 0.3em;
+        word-spacing: normal;
+    }
+    #linea {
+        margin-bottom: 4px;
     }
     .carousel-i img {
         height: 200px !important;

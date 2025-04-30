@@ -408,6 +408,7 @@ input[type=radio] {
     /*arreglo de section 3*/
 
     #footer{
+        margin: 0px 5px;
         font-size: 0.9em;
         text-decoration: none;
         justify-content: space-between;
@@ -415,7 +416,7 @@ input[type=radio] {
     }
     #footer li{
         list-style-type: none;
-        margin: 0 10px;
+        margin: 0px 10px;
     }
     #herramientas{
         font-size: 0.7em;

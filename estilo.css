@@ -379,7 +379,7 @@ input[type=radio] {
     list-style-type: none;
     margin: 0 10px;
 }
-@media (max-width: 720px) {
+@media (max-width: 600px) {
     #footer{
         font-size: 0.9em;
         text-decoration: none;
